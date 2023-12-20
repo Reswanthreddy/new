@@ -1,0 +1,21 @@
+package oops;
+
+public class ParentThread extends Thread {
+	public void run() {
+		for(int i =1;i<=5;i++) {
+			System.out.println("child thread");
+		}
+	}
+}
+class Threa {
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		ParentThread p1 = new ParentThread();
+		//p1.sleep(2000);
+		p1.start();
+		
+		for(int i=1;i<=5;i++) {
+			System.out.println("parent thread");
+		}
+	}
+}
